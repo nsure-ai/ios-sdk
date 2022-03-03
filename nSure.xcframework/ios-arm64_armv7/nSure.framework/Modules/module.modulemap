@@ -1,0 +1,6 @@
+framework module nSure {
+  umbrella header "nSure.h"
+
+  export *
+  module * { export * }
+}
