@@ -14,9 +14,10 @@
  This method will return a singleton instance of the <code>nSure</code> class for
  you using the given app ID.
 
- @param appId        your app ID
+ @param appId   your app ID
+ @param partherID   Optional  parther ID
  */
-+ (nonnull NSure*)sharedInstanceWithAppID:(NSString *_Nonnull)appId;
++ (nonnull NSure*)sharedInstanceWithAppID:(NSString *_Nonnull)appId partherID:(NSString *_Nullable)partherID;
 
 /*!
  *  Returns a previously instantiated singleton instance.

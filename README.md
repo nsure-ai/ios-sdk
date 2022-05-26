@@ -21,7 +21,7 @@ Import “NSure.h” into AppDelegate.m, and initialize nSure within `applicatio
 #import <nSure/nSure.h>
 
 - (BOOL)application:(UIApplication *)applicationdidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [NSure sharedInstanceWithAppID:@"iOS_OBJC_SAMPLE_APP_ID"];
+    [NSure sharedInstanceWithAppID:@"iOS_OBJC_SAMPLE_APP_ID" partherID:@"PARTNER_ID"];
 }
 ```
 ### Step 3: Retrieve device id from the sdk
@@ -62,7 +62,7 @@ Import “nSure” module into AppDelegate.swift, and initialize nSure within `a
 ```swift
 import nSure
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        NSure.sharedInstance(withAppID: "iOS_SWIFT_SAMPLE_APP_ID")
+        NSure.sharedInstance(withAppID: "iOS_SWIFT_SAMPLE_APP_ID", partherID: "PARTNER_ID")
 }
 ```
 
