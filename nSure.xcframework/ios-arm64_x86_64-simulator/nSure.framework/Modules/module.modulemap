@@ -1,5 +1,5 @@
 framework module nSure {
-  umbrella header "nSure.h"
+  umbrella header "NSure.h"
 
   export *
   module * { export * }
