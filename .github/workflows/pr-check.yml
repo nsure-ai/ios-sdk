@@ -1,0 +1,22 @@
+name: PR Check
+on:
+  push:
+    branches:
+      - main
+      - master
+jobs:
+  pr-check:
+    runs-on: ubuntu-20.04
+    steps:      
+      - name: Checkout github-actions-workflows
+        uses: actions/checkout@v3
+        with:
+          repository: nsure-ai/github-actions-workflows
+          token: ${{ secrets.GH_TOKEN_NSURE_DEVOPS }}
+      
+      - name: Run remote action
+        uses: ./pr-check
+        with:
+          JIRA_TOKEN_NSURE_DEVOPS: ${{ secrets.JIRA_TOKEN_NSURE_DEVOPS }}
+          SLACK_BOT_USER_OAUTH_ACCESS_TOKEN: ${{ secrets.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN_NSURE_DEVOPS }}
