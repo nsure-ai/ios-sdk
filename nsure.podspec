@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/nsure-ai/ios-sdk.git", :tag => s.version.to_s }
 
   s.ios.deployment_target = "13.0"
+  s.swift_version = '5.0'
   s.requires_arc = true
 
   s.preserve_paths = 'nSure.xcframework/*'
