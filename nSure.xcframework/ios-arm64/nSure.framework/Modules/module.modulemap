@@ -1,6 +1,11 @@
 framework module nSure {
   umbrella header "NSure.h"
-
   export *
+
   module * { export * }
+}
+
+module nSure.Swift {
+  header "nSure-Swift.h"
+  requires objc
 }
