@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.source_files = 'nSure.xcframework/ios-arm64/nSure.framework/Headers/*.{h,m,swift}'
   s.source           = { :git => "https://github.com/nsure-ai/ios-sdk.git", :tag => s.version.to_s }
 
-  s.ios.deployment_target = "10.0"
+  s.ios.deployment_target = "13.0"
   s.requires_arc = true
 
   s.preserve_paths = 'nSure.xcframework/*'
