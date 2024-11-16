@@ -1,8 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name nSure
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import FingerprintPro
 import Foundation
+import Network
 import Swift
 import _Concurrency
 import _StringProcessing
@@ -10,4 +12,19 @@ import _SwiftConcurrencyShims
 @_exported import nSure
 extension nSure.NSure {
   @objc dynamic public func setupFingerprintProAndGetRequestId(callback: @escaping (Swift.String?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NSureNetworkMonitor : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc public static let shared: nSure.NSureNetworkMonitor
+  @objc public func startMonitoring(callback: @escaping @Sendable (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NSureRemoteLogger : ObjectiveC.NSObject, @unchecked Swift.Sendable {
+  @objc public static let shared: nSure.NSureRemoteLogger
+  @objc public var isProd: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var appId: Swift.String
+  @objc public func log(msg: Swift.String)
+  @objc deinit
 }
