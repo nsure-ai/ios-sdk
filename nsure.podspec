@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "nSure"
-  s.version = "1.3.3"
+  s.version = "1.3.4"
   s.summary = "nSure framework"
   s.authors = "nSure"
   s.homepage = "https://github.com/nsure-ai/ios-sdk"
@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   s.public_header_files = 'nSure.xcframework/ios-arm64/nSure.framework/Headers/*.{h,m}'
 
   # Add FingerprintPro dependency
-  s.dependency 'FingerprintPro', '~> 2.2'
+  s.dependency 'FingerprintPro', '~> 2.7.0'
 end
