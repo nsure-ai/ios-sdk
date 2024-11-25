@@ -16,13 +16,6 @@
       },
       {
         "kind": "Import",
-        "name": "FingerprintPro",
-        "printedName": "FingerprintPro",
-        "declKind": "Import",
-        "moduleName": "nSure"
-      },
-      {
-        "kind": "Import",
         "name": "Network",
         "printedName": "Network",
         "declKind": "Import",
@@ -593,143 +586,6 @@
             "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "NSure",
-        "printedName": "NSure",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "setupFingerprintProAndGetRequestId",
-            "printedName": "setupFingerprintProAndGetRequestId(callback:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(Swift.String?) -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ]
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@CM@nSure@@objc(cs)NSure(im)setupFingerprintProAndGetRequestIdWithCallback:",
-            "mangledName": "$sSo5NSureC5nSureE34setupFingerprintProAndGetRequestId8callbackyySSSgc_tF",
-            "moduleName": "nSure",
-            "objc_name": "setupFingerprintProAndGetRequestIdWithCallback:",
-            "declAttributes": [
-              "Dynamic",
-              "AccessControl",
-              "ObjC"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:objc(cs)NSure",
-        "moduleName": "nSure",
-        "isOpen": true,
-        "objc_name": "NSure",
-        "declAttributes": [
-          "ObjC",
-          "Dynamic"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "isExternal": true,
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
-        ]
       }
     ],
     "json_format_version": 8
@@ -753,34 +609,34 @@
       "filePath": "\/Users\/eligreenfeld\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NsureRemoteLogger.swift",
       "kind": "StringLiteral",
       "offset": 355,
-      "length": 48,
-      "value": "\"https:\/\/sdk-error-manager-service.nsureapi.com\""
+      "length": 61,
+      "value": "\"https:\/\/sdk-error-manager-service.nsureapi.com\/reportSdkMsg\""
     },
     {
       "filePath": "\/Users\/eligreenfeld\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NsureRemoteLogger.swift",
       "kind": "StringLiteral",
-      "offset": 514,
-      "length": 48,
-      "value": "\"https:\/\/sdk-error-manager-service.nsureapi.com\""
+      "offset": 527,
+      "length": 61,
+      "value": "\"https:\/\/sdk-error-manager-service.nsureapi.com\/reportSdkMsg\""
     },
     {
       "filePath": "\/Users\/eligreenfeld\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NsureRemoteLogger.swift",
       "kind": "StringLiteral",
-      "offset": 610,
-      "length": 48,
-      "value": "\"https:\/\/sdk-error-manager-sandbox.nsureapi.com\""
+      "offset": 636,
+      "length": 61,
+      "value": "\"https:\/\/sdk-error-manager-sandbox.nsureapi.com\/reportSdkMsg\""
     },
     {
       "filePath": "\/Users\/eligreenfeld\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NsureRemoteLogger.swift",
       "kind": "BooleanLiteral",
-      "offset": 439,
+      "offset": 452,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/eligreenfeld\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NsureRemoteLogger.swift",
       "kind": "StringLiteral",
-      "offset": 723,
+      "offset": 762,
       "length": 2,
       "value": "\"\""
     }

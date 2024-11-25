@@ -283,8 +283,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 @import ObjectiveC;
 #endif
 
-#import <nSure/nSure.h>
-
 #endif
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
@@ -304,11 +302,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-@class NSString;
-
-@interface NSure (SWIFT_EXTENSION(nSure))
-- (void)setupFingerprintProAndGetRequestIdWithCallback:(void (^ _Nonnull)(NSString * _Nullable))callback;
-@end
 
 
 SWIFT_CLASS("_TtC5nSure19NSureNetworkMonitor")
@@ -320,6 +313,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureNetwork
 - (void)startMonitoringWithCallback:(void (^ _Nonnull)(BOOL))callback;
 @end
 
+@class NSString;
 
 SWIFT_CLASS("_TtC5nSure17NSureRemoteLogger")
 @interface NSureRemoteLogger : NSObject
