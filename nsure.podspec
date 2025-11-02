@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "nSure"
-  s.version = "1.3.12"
+  s.version = "1.3.13"
   s.summary = "nSure framework"
   s.authors = "nSure"
   s.homepage = "https://github.com/nsure-ai/ios-sdk"

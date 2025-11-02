@@ -22,6 +22,11 @@ Import “NSure.h” into AppDelegate.m, and initialize nSure within `applicatio
 
 - (BOOL)application:(UIApplication *)applicationdidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [NSure sharedInstanceWithAppID:@"iOS_OBJC_SAMPLE_APP_ID" partherID:@"PARTNER_ID"];
+    
+    // Optionally specify a custom configuration base URL
+    [NSure sharedInstanceWithAppID:@"iOS_OBJC_SAMPLE_APP_ID"
+                         partherID:@"PARTNER_ID"
+                     configBaseUrl:@"https://custom-config-url.com"];
 }
 ```
 ### Step 3: Retrieve device id from the sdk
@@ -63,6 +68,11 @@ Import “nSure” module into AppDelegate.swift, and initialize nSure within `a
 import nSure
 func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         NSure.sharedInstance(withAppID: "iOS_SWIFT_SAMPLE_APP_ID", partherID: "PARTNER_ID")
+        
+        // Optionally specify a custom configuration base URL
+        NSure.sharedInstance(withAppID: "iOS_SWIFT_SAMPLE_APP_ID",
+                             partherID: "PARTNER_ID",
+                             configBaseUrl: "https://custom-config-url.com")
 }
 ```
 
