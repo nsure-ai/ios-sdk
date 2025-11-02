@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/NSure.h</key>
 		<data>
-		hTK4+sBK026/FOMZDe4K7brZ60U=
+		xD1vd2NpgCC31RsROZGf9opttGo=
 		</data>
 		<key>Headers/nSure-Swift.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		shVbdrdnxNTkGPC3otQ/QXZdZYk=
+		FOXtyvAUmCq5Hf6iqmQoqBw7pM0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		/hgAHGbErPrPrzt3sk5G6+AcPS0=
+		gEvjWgXr7CfQm2fUe6OqmOSSmXs=
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		f1iPgj70CeOQ0KFqEpzAnAiOe2U=
+		TkEhmr9mZ4kiCP4Qcu/kAgL+OL8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,7 +67,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			upxA9bhYmHNlkYkt2ypgMZh6CZ0SHYoobPSIg3lSGc8=
+			u+TQgppXMDa60dn/8GfSYpNqiTY9VwxuYQou2Pd+RlY=
 			</data>
 		</dict>
 		<key>Headers/nSure-Swift.h</key>
@@ -116,7 +116,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qNlZR9WmoKbR0SPMq03IJsnYjT/bI+1CT92lH1LXWsA=
+			EV62ep5Xkpqps6UZBPrNMShv7ZVaWt5Ynld7/F6dmeg=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -151,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			S0eGDt3+To1h0yQMtP4HfiyooEb2xlOI74HKSU4W/EE=
+			nyBQw3FnjTbip72Ve5MgMNYZW9i3r3/RbdOzHMAoCkY=
 			</data>
 		</dict>
 	</dict>
