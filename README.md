@@ -29,6 +29,15 @@ Import “NSure.h” into AppDelegate.m, and initialize nSure within `applicatio
                      configBaseUrl:@"https://custom-config-url.com"];
 }
 ```
+#### Initialization Parameters:
+
+* **sharedInstanceWithAppID**  
+  The application identifier provided by nSure.ai.
+* **partnerID**  
+  The partner identifier provided by nSure.ai. If no partner ID is provided, set this value to `nil`.
+* **configBaseUrl**  
+  An optional base URL used for DNS cloaking. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
+
 ### Step 3: Retrieve device id from the sdk
 The sdk exposes a property "deviceId" on NSure.sharedInstance and one can use this property to retrieve the device id.
 
@@ -75,6 +84,14 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
                              configBaseUrl: "https://custom-config-url.com")
 }
 ```
+#### Initialization Parameters:
+
+* **sharedInstanceWithAppID**  
+  The application identifier provided by nSure.ai.
+* **partnerID**  
+  The partner identifier provided by nSure.ai. If no partner ID is provided, set this value to `nil`.
+* **configBaseUrl**  
+  An optional base URL used for DNS cloaking. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
 
 ### Step 3: Retrieve device id from the sdk
 The sdk exposes a property "deviceId" on NSure.sharedInstance and one can use this property to retrieve the device id.
