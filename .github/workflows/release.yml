@@ -1,0 +1,95 @@
+name: Release
+
+on:
+  push:
+    tags: ['[0-9]+.[0-9]+.[0-9]+']
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release (e.g. 1.3.16)'
+        required: true
+        type: string
+      dry_run:
+        description: 'Dry run (skip GitHub Release creation)'
+        type: boolean
+        default: false
+
+jobs:
+  release:
+    runs-on: macos-15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ contains(github.ref, 'refs/tags/') && github.event.repository.default_branch || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Resolve version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION=${{ inputs.version }}
+          else
+            VERSION=${GITHUB_REF_NAME}
+          fi
+          echo "tag=${VERSION}" >> $GITHUB_OUTPUT
+          echo "Version: ${VERSION}"
+
+      - name: Check if release already exists
+        id: check
+        run: |
+          if gh release view "${{ steps.version.outputs.tag }}" &>/dev/null; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "Release ${{ steps.version.outputs.tag }} already exists — skipping."
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Zip XCFramework
+        if: steps.check.outputs.exists == 'false'
+        run: zip -r nSure.xcframework.zip nSure.xcframework
+
+      - name: Compute checksum
+        if: steps.check.outputs.exists == 'false'
+        id: checksum
+        run: echo "sha=$(swift package compute-checksum nSure.xcframework.zip)" >> $GITHUB_OUTPUT
+
+      - name: Update Package.swift
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          TAG=${{ steps.version.outputs.tag }}
+          CHECKSUM=${{ steps.checksum.outputs.sha }}
+          sed -i '' "s|url: \".*nSure.xcframework.zip\"|url: \"https://github.com/nsure-ai/ios-sdk/releases/download/${TAG}/nSure.xcframework.zip\"|" Package.swift
+          sed -i '' "s|checksum: \".*\"|checksum: \"${CHECKSUM}\"|" Package.swift
+
+      - name: Update README version
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          TAG=${{ steps.version.outputs.tag }}
+          sed -i '' "s|version \*\*[0-9]*\.[0-9]*\.[0-9]*\*\*|version **${TAG}**|g" README.md
+
+      - name: Commit and update tag
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          TAG=${{ steps.version.outputs.tag }}
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Package.swift README.md
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "chore: update Package.swift for ${TAG}"
+          git tag -f "${TAG}"
+          BRANCH=${GITHUB_REF_NAME}
+          echo "${GITHUB_REF}" | grep -q "refs/tags/" && BRANCH=${{ github.event.repository.default_branch }}
+          git push origin HEAD:${BRANCH}
+          git push origin "${TAG}" --force
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.exists == 'false' && !(inputs.dry_run || false)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          files: nSure.xcframework.zip
+          generate_release_notes: true

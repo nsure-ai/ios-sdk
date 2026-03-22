@@ -1,19 +1,25 @@
-# Objective-C
-Follow the below steps to integrate the iOS library from source with an Objective-C project.
+# nSure iOS SDK
 
-### Step 1: Add nSure SDK to your app using Cocoapod
-If you haven’t already, install the latest version of CocoaPods.
+The nSure SDK can be integrated using **Swift Package Manager** or **CocoaPods**. See the language-specific sections below for installation and usage.
+
+---
+
+# Objective-C
+
+### Step 1: Add nSure SDK to your app
+
+**Using CocoaPods:**
 ```
-  pod init
+pod 'nSure'
 ```
-Add this line to your Podfile:
-```
-  pod 'nSure'
-``` 
-Run the following command:
-```
-  pod install
-```
+Then run `pod install`.
+
+**Using Swift Package Manager:**
+1. In Xcode: **File > Add Package Dependencies**
+2. Enter: `https://github.com/nsure-ai/ios-sdk`
+3. Select version **1.3.15** or later
+4. Add **nSure** to your target
+
 ### Step 2: Initialize
 Import “NSure.h” into AppDelegate.m, and initialize nSure within `application:didFinishLaunchingWithOptions:`
 
@@ -54,21 +60,20 @@ NSure.sharedInstance.deviceId
 ---
 
 # Swift
-Follow the below steps to integrate the iOS library from source with an Swift project.
 
 ### Step 1: Add nSure SDK to your app
-If you haven’t already, install the latest version of CocoaPods.
+
+**Using Swift Package Manager:**
+1. In Xcode: **File > Add Package Dependencies**
+2. Enter: `https://github.com/nsure-ai/ios-sdk`
+3. Select version **1.3.15** or later
+4. Add **nSure** to your target
+
+**Using CocoaPods:**
 ```
-  pod init
+pod 'nSure'
 ```
-Add this line to your Podfile:
-```
-  pod 'nSure'
-``` 
-Run the following command:
-```
-  pod install
-```
+Then run `pod install`.
 
 ### Step 2: Initialize
 Import “nSure” module into AppDelegate.swift, and initialize nSure within `application:didFinishLaunchingWithOptions:`
