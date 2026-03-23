@@ -17,7 +17,7 @@ let package = Package(
         .binaryTarget(
             name: "nSure",
             url: "https://github.com/nsure-ai/ios-sdk/releases/download/1.3.15/nSure.xcframework.zip",
-            checksum: "edc25decc62e527e0735df92480729c295d63efe9c98215ca108e5c2f0414d7e"
+            checksum: "34588dc1930b992edf4f28cacbde6599d0b769c76eae28ed266e77821d345d46"
         ),
         .target(
             name: "nSureDependencies",
