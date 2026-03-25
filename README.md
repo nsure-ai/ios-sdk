@@ -17,7 +17,7 @@ Then run `pod install`.
 **Using Swift Package Manager:**
 1. In Xcode: **File > Add Package Dependencies**
 2. Enter: `https://github.com/nsure-ai/ios-sdk`
-3. Select version **1.3.15** or later
+3. Select version **1.3.16** or later
 4. Add **nSure** to your target
 
 ### Step 2: Initialize
@@ -66,7 +66,7 @@ NSure.sharedInstance.deviceId
 **Using Swift Package Manager:**
 1. In Xcode: **File > Add Package Dependencies**
 2. Enter: `https://github.com/nsure-ai/ios-sdk`
-3. Select version **1.3.15** or later
+3. Select version **1.3.16** or later
 4. Add **nSure** to your target
 
 **Using CocoaPods:**
