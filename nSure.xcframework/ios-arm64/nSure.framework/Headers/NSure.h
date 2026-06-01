@@ -5,6 +5,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <nSure/NSureLogDelegateTryCatch.h>
 
 @interface NSure : NSObject
 
@@ -59,5 +60,18 @@
  */
 @property (nonatomic, readonly) NSString * _Nonnull version;
 
-@end
++ (NSString *_Nonnull)sdkVersion;
++ (NSString *_Nonnull)partnerId;
 
+/// Seconds elapsed since the SDK class was loaded (mach_absolute_time based).
++ (double)timeSinceAppStart;
+
+/// Duration of the synchronous portion of SDK init, in milliseconds.
+/// Returns 0 if init has not completed yet.
++ (int64_t)sdkInitDurationMs;
+
+/// Test-only helper that intentionally crashes from inside the SDK so the
+/// crash reporter can be validated end-to-end.
+- (void)simulateSDKCrashForTesting;
+
+@end

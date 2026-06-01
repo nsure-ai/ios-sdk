@@ -1,27 +1,90 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
-// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nSure
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
+// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nSure
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+import FingerprintPro
 import Foundation
 import Network
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import os.log
 @_exported import nSure
+import nSure_Private
+import os
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NSureNetworkMonitor : ObjectiveC.NSObject, @unchecked Swift.Sendable {
   @objc public static let shared: nSure.NSureNetworkMonitor
   @objc public func startMonitoring(callback: @escaping @Sendable (Swift.Bool) -> Swift.Void)
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class NSureRemoteLogger : ObjectiveC.NSObject, @unchecked Swift.Sendable {
-  @objc public static let shared: nSure.NSureRemoteLogger
-  @objc public var isProd: Swift.Bool {
+@objc public protocol NSureRemoteConfigListener {
+  @objc func onRemoteConfigUpdated(_ resolved: nSure.NSureResolvedConfig)
+}
+@_inheritsConvenienceInitializers @objc final public class NSureMobileRemoteConfig : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: nSure.NSureMobileRemoteConfig
+  @objc final public func addConfigListener(_ listener: any nSure.NSureRemoteConfigListener)
+  @objc final public func removeConfigListener(_ listener: any nSure.NSureRemoteConfigListener)
+  @objc final public func configListenerCountForTests() -> Swift.Int
+  @objc final public var resolvedConfig: nSure.NSureResolvedConfig {
+    @objc get
+  }
+  @objc final public var isSDKEnabled: Swift.Bool {
     @objc get
     @objc set
   }
-  @objc public var appId: Swift.String
-  @objc public func log(msg: Swift.String)
+  @objc dynamic final public var off: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic final public var merchantOff: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic final public var platformOff: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic final public var partnerOff: Swift.Bool {
+    @objc get
+  }
+  @objc dynamic final public func isOff() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc final public var appId: Swift.String {
+    get
+  }
+  @objc final public var partnerId: Swift.String
+  @objc final public var urlSessionConfiguration: Foundation.URLSessionConfiguration
+  @objc final public var localConfigOverride: [Swift.String : Any]? {
+    @objc get
+    @objc set
+  }
+  @objc dynamic final public func fetchRemoteConfig(with appId: Swift.String, configUrl: Swift.String?, fallbackConfigUrl: Swift.String?, completion: (() -> Swift.Void)?)
+  @objc dynamic final public func parseRemoteConfig(_ dict: [Swift.String : Any])
+  @objc public static var maxConfigBytes: Swift.Int {
+    @objc get
+  }
+  @objc public static func parseConfigJSONForTesting(_ data: Foundation.Data, source: Swift.String) -> [Swift.String : Any]?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NSureFingerprintManager : ObjectiveC.NSObject {
+  @objc public static let shared: nSure.NSureFingerprintManager
+  @objc override dynamic public init()
+  @objc final public var currentFpRequestId: Swift.String? {
+    @objc get
+  }
+  @objc final public var isStarted: Swift.Bool {
+    @objc get
+  }
+  @objc final public func start()
+  @objc final public func startWithApiKey(_ apiKey: Swift.String)
+  @objc final public func waitForReadiness(timeout: Foundation.TimeInterval, completion: @escaping () -> Swift.Void)
+  @objc final public var testFetchBlock: (() -> Swift.Void)?
+  @objc final public func testInjectResultWithVisitorId(_ visitorId: Swift.String, requestId: Swift.String)
+  @objc final public func testInjectFailure()
+  @objc final public var testPendingReadinessCallbackCount: Swift.Int {
+    @objc get
+  }
+  @objc final public func testFirePendingReadinessCallbacks()
+  @objc final public func testReset()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class NSureScreenshotDetector : ObjectiveC.NSObject {
@@ -31,3 +94,296 @@ import _SwiftConcurrencyShims
   @objc final public func stopListening()
   @objc deinit
 }
+@_inheritsConvenienceInitializers @objc final public class NSureVersionComparator : ObjectiveC.NSObject {
+  @objc public static func compare(_ v1: Swift.String?, with v2: Swift.String?) -> Foundation.ComparisonResult
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NSureResolvedConfig : ObjectiveC.NSObject {
+  @objc final public var keepAlive: Swift.Bool {
+    get
+  }
+  @objc final public var printScreen: Swift.Bool {
+    get
+  }
+  @objc final public var fingerprint: Swift.Bool {
+    get
+  }
+  @objc final public var sessionTracking: Swift.Bool {
+    get
+  }
+  @objc final public var crashReporting: Swift.Bool {
+    get
+  }
+  @objc final public var remoteLogging: Swift.Bool {
+    get
+  }
+  @objc final public var keepAliveRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var printScreenRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var fingerprintRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var sessionTrackingRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var crashReportingRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var remoteLoggingRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var appActivationRate: Swift.Int {
+    get
+  }
+  @objc final public var eventsReportUrl: Swift.String {
+    get
+  }
+  @objc final public var fingerprintApiKey: Swift.String {
+    get
+  }
+  @objc final public var logLevelRaw: Foundation.NSNumber? {
+    get
+  }
+  @objc final public var verbosityReportingRate: Foundation.NSNumber? {
+    get
+  }
+  @objc final public var globalOff: Swift.Bool {
+    get
+  }
+  @objc final public var merchantOff: Swift.Bool {
+    get
+  }
+  @objc final public var platformOff: Swift.Bool {
+    get
+  }
+  @objc final public var partnerOff: Swift.Bool {
+    get
+  }
+  final public var logLevel: nSure.NSureLogLevel? {
+    get
+    set
+  }
+  @objc public static func minimumModeConfig() -> nSure.NSureResolvedConfig
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc final public class NSureConfigResolver : ObjectiveC.NSObject {
+  @objc public static func resolve(json: [Swift.String : Any], appId: Swift.String, partnerId: Swift.String?, sdkVersion: Swift.String, osVersion: Swift.String, deviceId: Swift.String) -> nSure.NSureResolvedConfig
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum NSureLogLevel : Swift.Int, Swift.Comparable, Swift.CaseIterable {
+  case off = -1
+  case error = 0
+  case warning = 1
+  case info = 2
+  case debug = 3
+  case verbose = 4
+  public static func < (lhs: nSure.NSureLogLevel, rhs: nSure.NSureLogLevel) -> Swift.Bool
+  public var name: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [nSure.NSureLogLevel]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [nSure.NSureLogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum NSureLogCategory : Swift.Int, Swift.CaseIterable {
+  case core = 0
+  case config = 1
+  case session = 2
+  case events = 3
+  case network = 4
+  case fingerprint = 5
+  case lifecycle = 6
+  case crash = 7
+  case remoteLog = 8
+  public var rawStringValue: Swift.String {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [nSure.NSureLogCategory]
+  public typealias RawValue = Swift.Int
+  nonisolated public static var allCases: [nSure.NSureLogCategory] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol NSureLogDelegate {
+  @objc func nsureLog(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, message: Swift.String)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(NSureLog) final public class NSureLog : ObjectiveC.NSObject {
+  @objc public static func setLogLevel(_ level: nSure.NSureLogLevel)
+  public static func applyRemoteLevel(_ level: nSure.NSureLogLevel?)
+  @objc public static func clearRemoteLevel()
+  @objc public static func setLogDelegate(_ delegate: (any nSure.NSureLogDelegate)?)
+  @objc public static func isEnabled(for level: nSure.NSureLogLevel) -> Swift.Bool
+  public static func log(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
+  public static func e(_ category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
+  public static func w(_ category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
+  public static func i(_ category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
+  public static func d(_ category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
+  public static func v(_ category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(NSureLogObjC) final public class NSureLogObjC : ObjectiveC.NSObject {
+  @objc public static func log(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  @objc public static func logError(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  @objc public static func logWarning(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  @objc public static func logInfo(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  @objc public static func logDebug(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  @objc public static func logVerbose(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  @objc deinit
+}
+public protocol NSureClockProvider : AnyObject {
+  func now() -> Foundation.TimeInterval
+  func monotonicNow() -> Foundation.TimeInterval
+  func schedule(after delay: Foundation.TimeInterval, block: @escaping () -> Swift.Void)
+}
+extension nSure.NSureClockProvider {
+  public func schedule(after delay: Foundation.TimeInterval, block: @escaping () -> Swift.Void)
+}
+public struct NSureRemoteLogEntry : Swift.Codable, Swift.Equatable {
+  public let level: nSure.NSureLogLevel
+  public let category: nSure.NSureLogCategory
+  public let message: Swift.String
+  public let timestamp: Foundation.TimeInterval
+  public var deduplicatedCount: Swift.Int {
+    get
+  }
+  public init(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, message: Swift.String, timestamp: Foundation.TimeInterval, deduplicatedCount: Swift.Int = 1)
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (a: nSure.NSureRemoteLogEntry, b: nSure.NSureRemoteLogEntry) -> Swift.Bool
+}
+public protocol NSureRemoteLogTransport {
+  func send(_ entries: [nSure.NSureRemoteLogEntry], completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+}
+public protocol NSureRingBufferProtocol : AnyObject {
+  func add(_ entry: nSure.NSureRemoteLogEntry)
+  func pendingEntries() -> [nSure.NSureRemoteLogEntry]
+  func flush(completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+}
+public protocol NSureBackgroundTaskProvider : AnyObject {
+  func beginBackgroundTask(expirationHandler handler: (() -> Swift.Void)?) -> UIKit.UIBackgroundTaskIdentifier
+  func endBackgroundTask(_ identifier: UIKit.UIBackgroundTaskIdentifier)
+}
+final public class NSureRingBuffer : nSure.NSureRingBufferProtocol {
+  public init(capacity: Swift.Int = 100, transport: any nSure.NSureRemoteLogTransport, clock: any nSure.NSureClockProvider, deduplicationWindow: Foundation.TimeInterval = 5.0)
+  final public func add(_ entry: nSure.NSureRemoteLogEntry)
+  final public func pendingEntries() -> [nSure.NSureRemoteLogEntry]
+  final public func flush(completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+public enum NSureCircuitBreakerState : Swift.Int {
+  case closed
+  case open
+  case halfOpen
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+final public class NSureRemoteLogCircuitBreaker {
+  final public var state: nSure.NSureCircuitBreakerState {
+    get
+  }
+  final public var consecutiveFailureCount: Swift.Int {
+    get
+  }
+  final public var currentPauseDuration: Foundation.TimeInterval {
+    get
+  }
+  public init(failureThreshold: Swift.Int = 3, initialPauseDuration: Foundation.TimeInterval = 60, maxPauseDuration: Foundation.TimeInterval = 300, clock: any nSure.NSureClockProvider)
+  final public func shouldAllowRequest() -> Swift.Bool
+  final public func recordSuccess()
+  final public func recordFailure()
+  @objc deinit
+}
+final public class NSureRemoteLogDiskStore {
+  public init(directory: Foundation.URL)
+  final public func load() throws -> [nSure.NSureRemoteLogEntry]
+  final public func write(_ entries: [nSure.NSureRemoteLogEntry]) throws
+  final public func clear()
+  @objc deinit
+}
+final public class NSureRemoteLogHTTPTransport : nSure.NSureRemoteLogTransport {
+  public static let maxMessageBytes: Swift.Int
+  public static let maxBatchBytes: Swift.Int
+  public static let envelopeType: Swift.String
+  public init(baseURL: Swift.String, appId: Swift.String, deviceId: Swift.String, sdkVersion: Swift.String, session: Foundation.URLSession, osVersion: Swift.String = "unknown", model: Swift.String = "unknown")
+  final public func send(_ entries: [nSure.NSureRemoteLogEntry], completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+  @objc deinit
+}
+public enum NSureRemoteLogPermanentFailure {
+  public static let userInfoKey: Swift.String
+  public static let statusUserInfoKey: Swift.String
+  public static func isPermanent(_ error: any Swift.Error) -> Swift.Bool
+}
+public struct NSureRemoteLogConfig {
+  public let baseURL: Swift.String
+  public let appId: Swift.String
+  public let deviceId: Swift.String
+  public let sdkVersion: Swift.String
+  public let session: Foundation.URLSession?
+  public init(baseURL: Swift.String, appId: Swift.String, deviceId: Swift.String, sdkVersion: Swift.String, session: Foundation.URLSession? = nil)
+}
+extension UIKit.UIApplication : nSure.NSureBackgroundTaskProvider {
+}
+final public class NSureRemoteLogService {
+  public init(config: nSure.NSureRemoteLogConfig, clock: (any nSure.NSureClockProvider)? = nil, diskDirectory: Foundation.URL? = nil, flushInterval: Foundation.TimeInterval? = nil, backgroundTaskProvider: (any nSure.NSureBackgroundTaskProvider)? = nil, backgroundFlushTimeout: Foundation.TimeInterval? = nil)
+  final public func start()
+  final public func stop()
+  final public func teardown()
+  final public func enqueue(_ entry: nSure.NSureRemoteLogEntry)
+  final public func enqueue(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, message: Swift.String)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(NSureCrashProductionHooks) final public class NSureCrashProductionHooks : ObjectiveC.NSObject, nSure_Private.NSureCrashSubsystemHooks {
+  @objc public static func productionDefault() -> nSure.NSureCrashProductionHooks
+  @objc override dynamic public init()
+  @objc final public func checkVersionRecovery()
+  @objc final public func markPreviousLaunchCrashedIfNeeded()
+  @objc final public func bumpLaunchCounter()
+  @objc final public func isInSafeMode() -> Swift.Bool
+  @objc final public func emitSafeModeEvent()
+  @objc final public func markSDKDisabled()
+  @objc final public func snapshotBinaryImages()
+  @objc final public func initFastWriter() -> Swift.Bool
+  @objc final public func deliverPendingCrashes()
+  @objc public static func reportSdkMsgURL() -> Swift.String
+  @objc public static func setAppIdOverrideForTests(_ id: Swift.String?)
+  @objc public static func setReportSdkMsgURLOverrideForTests(_ url: Swift.String?)
+  @objc final public func installCrashHandlers() -> Swift.Bool
+  @objc final public func uninstallCrashHandlers()
+  @objc final public func emitAppInitDone()
+  @objc deinit
+}
+extension nSure.NSureCrashProductionHooks {
+  @objc public static func refreshKSCrashUserInfo()
+}
+@_inheritsConvenienceInitializers @objc(NSureEnvironment) final public class NSureEnvironment : ObjectiveC.NSObject {
+  @objc public static func isSandboxAppId(_ appId: Swift.String?) -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension nSure.NSureLogLevel : Swift.Hashable {}
+extension nSure.NSureLogLevel : Swift.RawRepresentable {}
+extension nSure.NSureLogCategory : Swift.Equatable {}
+extension nSure.NSureLogCategory : Swift.Hashable {}
+extension nSure.NSureLogCategory : Swift.RawRepresentable {}
+extension nSure.NSureCircuitBreakerState : Swift.Equatable {}
+extension nSure.NSureCircuitBreakerState : Swift.Hashable {}
+extension nSure.NSureCircuitBreakerState : Swift.RawRepresentable {}
