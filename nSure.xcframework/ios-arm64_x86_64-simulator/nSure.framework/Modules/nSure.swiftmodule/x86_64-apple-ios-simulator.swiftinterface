@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.3.2 effective-5.10 (swiftlang-6.3.2.1.108 clang-2100.1.1.101)
-// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nSure
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.2
+// swift-compiler-version: Apple Swift version 6.2.4 effective-5.10 (swiftlang-6.2.4.1.4 clang-1700.6.4.2)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name nSure
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.4
 import FingerprintPro
 import Foundation
 import Network
@@ -57,20 +57,26 @@ import os
     @objc get
     @objc set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc dynamic final public func fetchRemoteConfig(with appId: Swift.String, configUrl: Swift.String?, fallbackConfigUrl: Swift.String?, completion: (() -> Swift.Void)?)
+  #endif
   @objc dynamic final public func parseRemoteConfig(_ dict: [Swift.String : Any])
   @objc public static var maxConfigBytes: Swift.Int {
     @objc get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func parseConfigJSONForTesting(_ data: Foundation.Data, source: Swift.String) -> [Swift.String : Any]?
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc final public class NSureFingerprintManager : ObjectiveC.NSObject {
   @objc public static let shared: nSure.NSureFingerprintManager
   @objc override dynamic public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc final public var currentFpRequestId: Swift.String? {
     @objc get
   }
+  #endif
   @objc final public var isStarted: Swift.Bool {
     @objc get
   }
@@ -95,7 +101,9 @@ import os
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc final public class NSureVersionComparator : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func compare(_ v1: Swift.String?, with v2: Swift.String?) -> Foundation.ComparisonResult
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -163,16 +171,20 @@ import os
   @objc final public var partnerOff: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   final public var logLevel: nSure.NSureLogLevel? {
     get
     set
   }
+  #endif
   @objc public static func minimumModeConfig() -> nSure.NSureResolvedConfig
   @objc override dynamic public init()
   @objc deinit
 }
 @_inheritsConvenienceInitializers @objc final public class NSureConfigResolver : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func resolve(json: [Swift.String : Any], appId: Swift.String, partnerId: Swift.String?, sdkVersion: Swift.String, osVersion: Swift.String, deviceId: Swift.String) -> nSure.NSureResolvedConfig
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }
@@ -187,7 +199,9 @@ import os
   public var name: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias AllCases = [nSure.NSureLogLevel]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [nSure.NSureLogLevel] {
@@ -210,7 +224,9 @@ import os
   public var rawStringValue: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias AllCases = [nSure.NSureLogCategory]
   public typealias RawValue = Swift.Int
   nonisolated public static var allCases: [nSure.NSureLogCategory] {
@@ -225,9 +241,13 @@ import os
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(NSureLog) final public class NSureLog : ObjectiveC.NSObject {
   @objc public static func setLogLevel(_ level: nSure.NSureLogLevel)
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func applyRemoteLevel(_ level: nSure.NSureLogLevel?)
+  #endif
   @objc public static func clearRemoteLevel()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setLogDelegate(_ delegate: (any nSure.NSureLogDelegate)?)
+  #endif
   @objc public static func isEnabled(for level: nSure.NSureLogLevel) -> Swift.Bool
   public static func log(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
   public static func e(_ category: nSure.NSureLogCategory, _ message: @autoclosure () -> Swift.String)
@@ -238,12 +258,24 @@ import os
   @objc deinit
 }
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(NSureLogObjC) final public class NSureLogObjC : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func log(level: nSure.NSureLogLevel, category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func logError(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func logWarning(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func logInfo(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func logDebug(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func logVerbose(_ category: nSure.NSureLogCategory, message: Foundation.NSString?)
+  #endif
   @objc deinit
 }
 public protocol NSureClockProvider : AnyObject {
@@ -268,29 +300,39 @@ public struct NSureRemoteLogEntry : Swift.Codable, Swift.Equatable {
   public static func == (a: nSure.NSureRemoteLogEntry, b: nSure.NSureRemoteLogEntry) -> Swift.Bool
 }
 public protocol NSureRemoteLogTransport {
+  #if compiler(>=5.3) && $NonescapableTypes
   func send(_ entries: [nSure.NSureRemoteLogEntry], completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+  #endif
 }
 public protocol NSureRingBufferProtocol : AnyObject {
   func add(_ entry: nSure.NSureRemoteLogEntry)
   func pendingEntries() -> [nSure.NSureRemoteLogEntry]
+  #if compiler(>=5.3) && $NonescapableTypes
   func flush(completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+  #endif
 }
 public protocol NSureBackgroundTaskProvider : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   func beginBackgroundTask(expirationHandler handler: (() -> Swift.Void)?) -> UIKit.UIBackgroundTaskIdentifier
+  #endif
   func endBackgroundTask(_ identifier: UIKit.UIBackgroundTaskIdentifier)
 }
 final public class NSureRingBuffer : nSure.NSureRingBufferProtocol {
   public init(capacity: Swift.Int = 100, transport: any nSure.NSureRemoteLogTransport, clock: any nSure.NSureClockProvider, deduplicationWindow: Foundation.TimeInterval = 5.0)
   final public func add(_ entry: nSure.NSureRemoteLogEntry)
   final public func pendingEntries() -> [nSure.NSureRemoteLogEntry]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func flush(completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+  #endif
   @objc deinit
 }
 public enum NSureCircuitBreakerState : Swift.Int {
   case closed
   case open
   case halfOpen
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -324,7 +366,9 @@ final public class NSureRemoteLogHTTPTransport : nSure.NSureRemoteLogTransport {
   public static let maxBatchBytes: Swift.Int
   public static let envelopeType: Swift.String
   public init(baseURL: Swift.String, appId: Swift.String, deviceId: Swift.String, sdkVersion: Swift.String, session: Foundation.URLSession, osVersion: Swift.String = "unknown", model: Swift.String = "unknown")
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func send(_ entries: [nSure.NSureRemoteLogEntry], completion: @escaping (Swift.Result<Swift.Int, any Swift.Error>) -> Swift.Void)
+  #endif
   @objc deinit
 }
 public enum NSureRemoteLogPermanentFailure {
@@ -338,12 +382,16 @@ public struct NSureRemoteLogConfig {
   public let deviceId: Swift.String
   public let sdkVersion: Swift.String
   public let session: Foundation.URLSession?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(baseURL: Swift.String, appId: Swift.String, deviceId: Swift.String, sdkVersion: Swift.String, session: Foundation.URLSession? = nil)
+  #endif
 }
 extension UIKit.UIApplication : nSure.NSureBackgroundTaskProvider {
 }
 final public class NSureRemoteLogService {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(config: nSure.NSureRemoteLogConfig, clock: (any nSure.NSureClockProvider)? = nil, diskDirectory: Foundation.URL? = nil, flushInterval: Foundation.TimeInterval? = nil, backgroundTaskProvider: (any nSure.NSureBackgroundTaskProvider)? = nil, backgroundFlushTimeout: Foundation.TimeInterval? = nil)
+  #endif
   final public func start()
   final public func stop()
   final public func teardown()
@@ -364,8 +412,12 @@ final public class NSureRemoteLogService {
   @objc final public func initFastWriter() -> Swift.Bool
   @objc final public func deliverPendingCrashes()
   @objc public static func reportSdkMsgURL() -> Swift.String
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setAppIdOverrideForTests(_ id: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func setReportSdkMsgURLOverrideForTests(_ url: Swift.String?)
+  #endif
   @objc final public func installCrashHandlers() -> Swift.Bool
   @objc final public func uninstallCrashHandlers()
   @objc final public func emitAppInitDone()
@@ -375,7 +427,9 @@ extension nSure.NSureCrashProductionHooks {
   @objc public static func refreshKSCrashUserInfo()
 }
 @_inheritsConvenienceInitializers @objc(NSureEnvironment) final public class NSureEnvironment : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func isSandboxAppId(_ appId: Swift.String?) -> Swift.Bool
+  #endif
   @objc override dynamic public init()
   @objc deinit
 }

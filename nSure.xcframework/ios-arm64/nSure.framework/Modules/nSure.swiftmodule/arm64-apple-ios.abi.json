@@ -147,24 +147,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
           },
           {
             "kind": "Conformance",
@@ -175,17 +161,10 @@
           },
           {
             "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -196,13 +175,6 @@
           },
           {
             "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
@@ -210,17 +182,45 @@
           },
           {
             "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SendableMetatype",
             "printedName": "SendableMetatype",
             "usr": "s:s16SendableMetatypeP",
             "mangledName": "$ss16SendableMetatypeP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Sendable",
-            "printedName": "Sendable",
-            "usr": "s:s8SendableP",
-            "mangledName": "$ss8SendableP"
           }
         ]
       },
@@ -1492,52 +1492,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -1548,10 +1506,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -2191,52 +2191,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -2247,10 +2205,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -2535,52 +2535,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -2591,10 +2549,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -2706,52 +2706,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -2762,10 +2720,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -4073,52 +4073,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -4129,10 +4087,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -4274,52 +4274,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -4330,10 +4288,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -4826,17 +4826,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Escapable",
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -5483,17 +5483,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Escapable",
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -6150,52 +6150,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -6206,10 +6164,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -6515,52 +6515,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -6571,10 +6529,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -7152,6 +7152,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Decodable",
             "printedName": "Decodable",
             "usr": "s:Se",
@@ -7170,13 +7177,6 @@
             "printedName": "Equatable",
             "usr": "s:SQ",
             "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
           }
         ]
       },
@@ -7958,17 +7958,17 @@
           },
           {
             "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
             "name": "Escapable",
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -10100,52 +10100,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -10156,10 +10114,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -10263,52 +10263,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -10319,10 +10277,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           }
         ]
       },
@@ -10353,52 +10353,10 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
             "name": "Copyable",
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
           },
           {
             "kind": "Conformance",
@@ -10409,10 +10367,52 @@
           },
           {
             "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
             "name": "Hashable",
             "printedName": "Hashable",
             "usr": "s:SH",
             "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
           },
           {
             "kind": "Conformance",
@@ -10428,917 +10428,917 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureNetworkMonitor.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureNetworkMonitor.swift",
       "kind": "BooleanLiteral",
       "offset": 450,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureNetworkMonitor.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureNetworkMonitor.swift",
       "kind": "StringLiteral",
       "offset": 1310,
       "length": 22,
       "value": "\"networkStatusChanged\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "Array",
       "offset": 1225,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 1379,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 4462,
       "length": 61,
       "value": "\"https:\/\/sdk-error-manager-service.nsureapi.com\/reportSdkMsg\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 4705,
       "length": 61,
       "value": "\"https:\/\/sdk-error-manager-sandbox.nsureapi.com\/reportSdkMsg\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 5442,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 6464,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 6507,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 6550,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 6592,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8341,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8385,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8455,
       "length": 11,
       "value": "\"nsure_off\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8507,
       "length": 20,
       "value": "\"nsure_merchant_off\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8568,
       "length": 20,
       "value": "\"nsure_platform_off\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8628,
       "length": 19,
       "value": "\"nsure_partner_off\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8684,
       "length": 23,
       "value": "\"nsure_config_cache_ts\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 8782,
       "length": 15,
       "value": "\"remote-config\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 8846,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 8850,
       "length": 2,
       "value": "24"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 8855,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 8860,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 8940,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "StringLiteral",
       "offset": 9416,
       "length": 104,
       "value": "\"localConfigOverride set after fetchRemoteConfig was already called. It will take effect on next fetch.\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 20337,
       "length": 6,
       "value": "262144"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureFingerprintManager.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureFingerprintManager.swift",
       "kind": "BooleanLiteral",
       "offset": 722,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureFingerprintManager.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureFingerprintManager.swift",
       "kind": "StringLiteral",
       "offset": 1339,
       "length": 29,
       "value": "\"com.nsure.fingerprint.state\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureFingerprintManager.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureFingerprintManager.swift",
       "kind": "BooleanLiteral",
       "offset": 1447,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureFingerprintManager.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureFingerprintManager.swift",
       "kind": "Array",
       "offset": 1659,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureFingerprintManager.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureFingerprintManager.swift",
       "kind": "StringLiteral",
       "offset": 1695,
       "length": 22,
       "value": "\"KxV6sLn9nXBGBzPtzicI\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 288,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 348,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 408,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 472,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 768,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 831,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 904,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 976,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 1048,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 1124,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 1199,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 1271,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "IntegerLiteral",
       "offset": 1334,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "StringLiteral",
       "offset": 1399,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "StringLiteral",
       "offset": 1465,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 2501,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 2562,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 2623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureResolvedConfig.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureResolvedConfig.swift",
       "kind": "BooleanLiteral",
       "offset": 2683,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogLevel.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 256,
       "length": 2,
       "value": "-1"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogLevel.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 278,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogLevel.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 299,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogLevel.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 320,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogLevel.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 341,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogLevel.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogLevel.swift",
       "kind": "IntegerLiteral",
       "offset": 362,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 282,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 307,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 332,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 357,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 382,
       "length": 1,
       "value": "4"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 407,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 432,
       "length": 1,
       "value": "6"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 457,
       "length": 1,
       "value": "7"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLogCategory.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLogCategory.swift",
       "kind": "IntegerLiteral",
       "offset": 482,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLog.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLog.swift",
       "kind": "IntegerLiteral",
       "offset": 1406,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLog.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLog.swift",
       "kind": "Dictionary",
       "offset": 3059,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLog.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLog.swift",
       "kind": "BooleanLiteral",
       "offset": 3288,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLog.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLog.swift",
       "kind": "BooleanLiteral",
       "offset": 3638,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLog.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLog.swift",
       "kind": "BooleanLiteral",
       "offset": 3916,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureLog.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureLog.swift",
       "kind": "StringLiteral",
       "offset": 4358,
       "length": 15,
       "value": "\"com.nsure.sdk\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogTypes.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogTypes.swift",
       "kind": "IntegerLiteral",
       "offset": 3934,
       "length": 1,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRingBuffer.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRingBuffer.swift",
       "kind": "StringLiteral",
       "offset": 551,
       "length": 27,
       "value": "\"com.nsure.sdk.ring-buffer\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRingBuffer.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRingBuffer.swift",
       "kind": "Array",
       "offset": 629,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRingBuffer.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRingBuffer.swift",
       "kind": "IntegerLiteral",
       "offset": 686,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRingBuffer.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRingBuffer.swift",
       "kind": "FloatLiteral",
       "offset": 838,
       "length": 3,
       "value": "5.0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 368,
       "length": 4,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 382,
       "length": 8,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 1061,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 1430,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 1494,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 1550,
       "length": 2,
       "value": "60"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogCircuitBreaker.swift",
       "kind": "IntegerLiteral",
       "offset": 1603,
       "length": 3,
       "value": "300"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
       "kind": "StringLiteral",
       "offset": 354,
       "length": 19,
       "value": "\"pending_logs.json\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
       "kind": "StringLiteral",
       "offset": 412,
       "length": 23,
       "value": "\"pending_logs.json.tmp\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
       "kind": "IntegerLiteral",
       "offset": 481,
       "length": 2,
       "value": "50"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogDiskStore.swift",
       "kind": "IntegerLiteral",
       "offset": 486,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "IntegerLiteral",
       "offset": 1203,
       "length": 1,
       "value": "8"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "IntegerLiteral",
       "offset": 1207,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "IntegerLiteral",
       "offset": 1691,
       "length": 2,
       "value": "64"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "IntegerLiteral",
       "offset": 1696,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 1913,
       "length": 11,
       "value": "\"log_batch\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 2023,
       "length": 13,
       "value": "\"[truncated]\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 2341,
       "length": 15,
       "value": "\"com.nsure.sdk\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 2368,
       "length": 22,
       "value": "\"remote-log-transport\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 2621,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 2664,
       "length": 9,
       "value": "\"unknown\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 15259,
       "length": 32,
       "value": "\"NSureRemoteLogPermanentFailure\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogHTTPTransport.swift",
       "kind": "StringLiteral",
       "offset": 15475,
       "length": 26,
       "value": "\"NSureRemoteLogHTTPStatus\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "StringLiteral",
       "offset": 1378,
       "length": 15,
       "value": "\"com.nsure.sdk\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "StringLiteral",
       "offset": 1405,
       "length": 20,
       "value": "\"remote-log-service\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "IntegerLiteral",
       "offset": 2604,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "IntegerLiteral",
       "offset": 2664,
       "length": 2,
       "value": "30"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "StringLiteral",
       "offset": 3550,
       "length": 26,
       "value": "\"com.nsure.sdk.remote-log\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "IntegerLiteral",
       "offset": 3675,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "BooleanLiteral",
       "offset": 3711,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "BooleanLiteral",
       "offset": 3759,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "BooleanLiteral",
       "offset": 3812,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureRemoteLogService.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteLogService.swift",
       "kind": "Array",
       "offset": 3874,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureCrashDelivery.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureCrashDelivery.swift",
       "kind": "IntegerLiteral",
       "offset": 341,
       "length": 2,
       "value": "64"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureCrashDelivery.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureCrashDelivery.swift",
       "kind": "IntegerLiteral",
       "offset": 346,
       "length": 4,
       "value": "1024"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureCrashDelivery.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureCrashDelivery.swift",
       "kind": "IntegerLiteral",
       "offset": 403,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "IntegerLiteral",
       "offset": 2481,
       "length": 1,
       "value": "5"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "IntegerLiteral",
       "offset": 2529,
       "length": 1,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3065,
       "length": 17,
       "value": "\"crash_meta.json\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3191,
       "length": 6,
       "value": "\".tmp\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3695,
       "length": 18,
       "value": "\"launchTimestamps\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3751,
       "length": 12,
       "value": "\"crashFlags\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3804,
       "length": 15,
       "value": "\"sdkCrashCount\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3857,
       "length": 12,
       "value": "\"appVersion\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3907,
       "length": 12,
       "value": "\"sdkVersion\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 3964,
       "length": 19,
       "value": "\"safeModeEnteredAt\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 4035,
       "length": 11,
       "value": "\"reportIDs\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "BooleanLiteral",
       "offset": 5407,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 16458,
       "length": 17,
       "value": "\"com.nsure.crash\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "StringLiteral",
       "offset": 19410,
       "length": 35,
       "value": "\"kscrash_safe_mode_report_ids.json\""
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "Array",
       "offset": 32553,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "Array",
       "offset": 32589,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureSafeModeTracker.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureSafeModeTracker.swift",
       "kind": "IntegerLiteral",
       "offset": 32625,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureCrashStartWiring.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureCrashStartWiring.swift",
       "kind": "FloatLiteral",
       "offset": 9334,
       "length": 4,
       "value": "30.0"
     },
     {
-      "filePath": "\/Users\/eli\/Projects\/NSure\/NSure iOS\/NSure SDK\/nSure\/nSure\/NSureCrashStartWiring.swift",
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureCrashStartWiring.swift",
       "kind": "Dictionary",
       "offset": 17869,
       "length": 3,
