@@ -281,7 +281,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import Foundation;
 @import ObjectiveC;
+@import nSure_Private;
 #endif
 
 #endif
@@ -304,6 +306,210 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 
+@class NSString;
+@class NSureResolvedConfig;
+SWIFT_CLASS("_TtC5nSure19NSureConfigResolver")
+@interface NSureConfigResolver : NSObject
++ (NSureResolvedConfig * _Nonnull)resolveWithJson:(NSDictionary<NSString *, id> * _Nonnull)json appId:(NSString * _Nonnull)appId partnerId:(NSString * _Nullable)partnerId sdkVersion:(NSString * _Nonnull)sdkVersion osVersion:(NSString * _Nonnull)osVersion deviceId:(NSString * _Nonnull)deviceId SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+/// Production implementation of NSureCrashSubsystemHooks. Exposed to
+/// NSure.m as the <code>@objc(NSureCrashProductionHooks)</code> class with the
+/// <code>+productionDefault</code> class method.
+/// Declared <code>public</code> so the class name and the <code>+productionDefault</code> entry
+/// point appear in the generated <code>nSure-Swift.h</code> header that NSure.m
+/// consumes. Internal visibility would suppress it from the header even
+/// though the ObjC runtime can still see it at launch time — NSure.m
+/// compiles before Swift runs, so “unseen by ObjC header” = “unknown
+/// identifier at compile time”. Matches the pattern already used by
+/// NSureLogObjC in the same target.
+SWIFT_CLASS_NAMED("NSureCrashProductionHooks")
+@interface NSureCrashProductionHooks : NSObject <NSureCrashSubsystemHooks>
+/// Return a fresh production hooks instance. NSure.m caches the result
+/// for the lifetime of the process.
++ (NSureCrashProductionHooks * _Nonnull)productionDefault SWIFT_WARN_UNUSED_RESULT;
+/// Explicit public no-argument initializer so the generated ObjC
+/// interface exposes <code>-[NSureCrashProductionHooks init]</code> (the
+/// <code>+productionDefault</code> factory is the real entry point — this exists
+/// only so the class is instantiable from ObjC if a consumer ever
+/// needs it).
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (void)checkVersionRecovery;
+- (void)markPreviousLaunchCrashedIfNeeded;
+- (void)bumpLaunchCounter;
+- (BOOL)isInSafeMode SWIFT_WARN_UNUSED_RESULT;
+- (void)emitSafeModeEvent;
+- (void)markSDKDisabled;
+- (void)snapshotBinaryImages;
+- (BOOL)initFastWriter SWIFT_METHOD_FAMILY(none) SWIFT_WARN_UNUSED_RESULT;
+- (void)deliverPendingCrashes;
+/// Resolved URL: sandbox iff the configured app id starts with
+/// <code>sandbox</code> (case-insensitive). Same heuristic NSure.m uses to set
+/// <code>_isProduction</code> and <code>_serverURL</code>. The app id is read from the
+/// Objective-C global <code>NSURE_APP_ID</code> via <code>NSureCrashAppIdBridge_currentAppId</code>
+/// so production and tests share the same UTF-8 bridge path.
++ (NSString * _Nonnull)reportSdkMsgURL SWIFT_WARN_UNUSED_RESULT;
+/// Test-only: pin the appId used for endpoint resolution. Pass nil
+/// to clear. Used by the wiring tests.
++ (void)setAppIdOverrideForTests:(NSString * _Nullable)id;
+/// Test-only: pin the resolved URL directly. Used by coexistence
+/// tests that exercise the full wiring against a stub poster.
++ (void)setReportSdkMsgURLOverrideForTests:(NSString * _Nullable)url;
+- (BOOL)installCrashHandlers SWIFT_WARN_UNUSED_RESULT;
+- (void)uninstallCrashHandlers;
+- (void)emitAppInitDone;
+@end
+
+@interface NSureCrashProductionHooks (SWIFT_EXTENSION(nSure))
++ (void)refreshKSCrashUserInfo;
+@end
+
+/// Small utility for SDK-wide environment queries.
+SWIFT_CLASS_NAMED("NSureEnvironment")
+@interface NSureEnvironment : NSObject
+/// Returns <code>true</code> when the given app ID denotes a sandbox environment.
+/// The heuristic is identical across iOS and Android: a
+/// case-insensitive “sandbox” prefix on the app ID string.
++ (BOOL)isSandboxAppId:(NSString * _Nullable)appId SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+SWIFT_CLASS("_TtC5nSure23NSureFingerprintManager")
+@interface NSureFingerprintManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureFingerprintManager * _Nonnull shared;)
++ (NSureFingerprintManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Returns the cached requestId, or nil if not yet available or failed.
+@property (nonatomic, readonly, copy) NSString * _Nullable currentFpRequestId;
+/// True once start() or startWithApiKey(_:) has been called.
+@property (nonatomic, readonly) BOOL isStarted;
+/// Start fingerprint fetch. Uses the provided remote config key if non-empty,
+/// otherwise falls back to the default key. Idempotent — second call is a no-op.
+- (void)start;
+/// Underlying fetch method. Called by start() in production and directly by tests.
+/// \param apiKey FingerprintPro public API key.
+///
+- (void)startWithApiKey:(NSString * _Nonnull)apiKey;
+/// Wait until the fingerprint state settles (.available or .failed), or until
+/// <code>timeout</code> seconds elapse — whichever comes first. The completion block is
+/// called exactly once on a background queue.
+/// If state is already settled when called, <code>completion</code> fires immediately
+/// (asynchronously on a global queue to avoid deadlocks).
+- (void)waitForReadinessWithTimeout:(NSTimeInterval)timeout completion:(void (^ _Nonnull)(void))completion;
+/// When non-nil, called instead of FingerprintProFactory in performFetch.
+/// Use in pre-commit / CODE_SIGNING_ALLOWED=NO environments where
+/// FingerprintPro’s Keychain init crashes (missing entitlements).
+@property (nonatomic, copy) void (^ _Nullable testFetchBlock)(void);
+/// Simulate a successful fingerprint fetch result. For unit tests only.
+/// Also drains any pending waitForReadiness callbacks.
+- (void)testInjectResultWithVisitorId:(NSString * _Nonnull)visitorId requestId:(NSString * _Nonnull)requestId;
+/// Simulate a failed fingerprint fetch. For unit tests only.
+/// Also drains any pending waitForReadiness callbacks.
+- (void)testInjectFailure;
+@property (nonatomic, readonly) NSInteger testPendingReadinessCallbackCount;
+- (void)testFirePendingReadinessCallbacks;
+/// Reset the manager to its initial state. For unit tests only.
+/// Discards any pending callbacks without firing them. Preserves
+/// <code>testFetchBlock</code> so the next start() call cannot reach real FP.
+- (void)testReset;
+@end
+
+enum NSureLogLevel : NSInteger;
+@protocol NSureLogDelegate;
+SWIFT_CLASS_NAMED("NSureLog")
+@interface NSureLog : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
++ (void)setLogLevel:(enum NSureLogLevel)level;
+/// Clear the remote log level override, reverting to the local ceiling.
++ (void)clearRemoteLevel;
++ (void)setLogDelegate:(id <NSureLogDelegate> _Nullable)delegate;
+/// Returns true if a message at <code>level</code> would pass the current threshold.
++ (BOOL)isEnabledFor:(enum NSureLogLevel)level SWIFT_WARN_UNUSED_RESULT;
+@end
+
+typedef SWIFT_ENUM(NSInteger, NSureLogCategory, open) {
+  NSureLogCategoryCore = 0,
+  NSureLogCategoryConfig = 1,
+  NSureLogCategorySession = 2,
+  NSureLogCategoryEvents = 3,
+  NSureLogCategoryNetwork = 4,
+  NSureLogCategoryFingerprint = 5,
+  NSureLogCategoryLifecycle = 6,
+  NSureLogCategoryCrash = 7,
+  NSureLogCategoryRemoteLog = 8,
+};
+
+SWIFT_PROTOCOL("_TtP5nSure16NSureLogDelegate_")
+@protocol NSureLogDelegate
+- (void)nsureLogWithLevel:(enum NSureLogLevel)level category:(enum NSureLogCategory)category message:(NSString * _Nonnull)message;
+@end
+
+typedef SWIFT_ENUM(NSInteger, NSureLogLevel, open) {
+  NSureLogLevelOff = -1,
+  NSureLogLevelError = 0,
+  NSureLogLevelWarning = 1,
+  NSureLogLevelInfo = 2,
+  NSureLogLevelDebug = 3,
+  NSureLogLevelVerbose = 4,
+};
+
+SWIFT_CLASS_NAMED("NSureLogObjC")
+@interface NSureLogObjC : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+/// General log method. Guards against invalid enum raw values from ObjC callers.
+/// The message parameter is declared optional to safely handle ObjC callers passing nil
+/// (which can happen despite nonnull annotations when callers silence the warning).
++ (void)logWithLevel:(enum NSureLogLevel)level category:(enum NSureLogCategory)category message:(NSString * _Nullable)message;
++ (void)logError:(enum NSureLogCategory)category message:(NSString * _Nullable)message;
++ (void)logWarning:(enum NSureLogCategory)category message:(NSString * _Nullable)message;
++ (void)logInfo:(enum NSureLogCategory)category message:(NSString * _Nullable)message;
++ (void)logDebug:(enum NSureLogCategory)category message:(NSString * _Nullable)message;
++ (void)logVerbose:(enum NSureLogCategory)category message:(NSString * _Nullable)message;
+@end
+
+@protocol NSureRemoteConfigListener;
+@class NSURLSessionConfiguration;
+@class NSData;
+SWIFT_CLASS("_TtC5nSure23NSureMobileRemoteConfig")
+@interface NSureMobileRemoteConfig : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureMobileRemoteConfig * _Nonnull sharedInstance;)
++ (NSureMobileRemoteConfig * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+/// Register a listener for live config updates. Double-add is a
+/// no-op (object identity check). Thread-safe.
+- (void)addConfigListener:(id <NSureRemoteConfigListener> _Nonnull)listener;
+/// Unregister a previously added listener. Thread-safe.
+- (void)removeConfigListener:(id <NSureRemoteConfigListener> _Nonnull)listener;
+/// Visible for tests — snapshot the current listener count so tests
+/// can assert registration without reaching through reflection.
+- (NSInteger)configListenerCountForTests SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, readonly, strong) NSureResolvedConfig * _Nonnull resolvedConfig;
+@property (nonatomic) BOOL isSDKEnabled;
+@property (nonatomic, readonly) BOOL off;
+@property (nonatomic, readonly) BOOL merchantOff;
+@property (nonatomic, readonly) BOOL platformOff;
+@property (nonatomic, readonly) BOOL partnerOff;
+- (BOOL)isOff SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull appId;
+@property (nonatomic, copy) NSString * _Nonnull partnerId;
+/// URLSession configuration used for config fetches.
+/// Uses .default so globally registered URLProtocol subclasses are picked up at call time.
+@property (nonatomic, strong) NSURLSessionConfiguration * _Nonnull urlSessionConfiguration;
+/// Set this before SDK init to bypass network fetch and use a local JSON dictionary.
+@property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable localConfigOverride;
+- (void)fetchRemoteConfigWith:(NSString * _Nonnull)appId configUrl:(NSString * _Nullable)configUrl fallbackConfigUrl:(NSString * _Nullable)fallbackConfigUrl completion:(void (^ _Nullable)(void))completion;
+- (void)parseRemoteConfig:(NSDictionary<NSString *, id> * _Nonnull)dict;
+/// Hard size cap for remote-config payloads. Bodies over this are rejected
+/// without parsing to bound memory/CPU on a hostile or misbehaving server.
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger maxConfigBytes;)
++ (NSInteger)maxConfigBytes SWIFT_WARN_UNUSED_RESULT;
+/// Test-only wrapper that exposes the private parser to ObjC tests.
++ (NSDictionary<NSString *, id> * _Nullable)parseConfigJSONForTesting:(NSData * _Nonnull)data source:(NSString * _Nonnull)source SWIFT_WARN_UNUSED_RESULT;
+@end
+
 SWIFT_CLASS("_TtC5nSure19NSureNetworkMonitor")
 @interface NSureNetworkMonitor : NSObject
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureNetworkMonitor * _Nonnull shared;)
@@ -313,16 +519,62 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureNetwork
 - (void)startMonitoringWithCallback:(void (^ _Nonnull)(BOOL))callback;
 @end
 
-@class NSString;
-SWIFT_CLASS("_TtC5nSure17NSureRemoteLogger")
-@interface NSureRemoteLogger : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureRemoteLogger * _Nonnull shared;)
-+ (NSureRemoteLogger * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@property (nonatomic) BOOL isProd;
-@property (nonatomic, copy) NSString * _Nonnull appId;
-- (void)logWithMsg:(NSString * _Nonnull)msg;
+/// Listener protocol for subsystems that need to react to remote-config
+/// updates at runtime (not just the one-shot post-init callback). Fires
+/// after <code>resolvedConfig</code> has been updated and all side-effects inside
+/// <code>parseRemoteConfig</code> / <code>loadFromCacheOrMinimumMode</code> have run, on the
+/// main thread (the parse path always dispatches to main).
+/// Listeners MUST NOT raise — any exception is caught and NSLogged
+/// inside <code>fireConfigUpdated(_:)</code> so the config pipeline cannot be
+/// broken by a buggy subscriber.
+SWIFT_PROTOCOL("_TtP5nSure25NSureRemoteConfigListener_")
+@protocol NSureRemoteConfigListener
+- (void)onRemoteConfigUpdated:(NSureResolvedConfig * _Nonnull)resolved;
+@end
+
+@class NSNumber;
+/// Resolved feature configuration after three-level merge.
+/// Properties use internal(set) — tests configure state via parseRemoteConfig with JSON dicts.
+SWIFT_CLASS("_TtC5nSure19NSureResolvedConfig")
+@interface NSureResolvedConfig : NSObject
+@property (nonatomic, readonly) BOOL keepAlive;
+@property (nonatomic, readonly) BOOL printScreen;
+@property (nonatomic, readonly) BOOL fingerprint;
+@property (nonatomic, readonly) BOOL sessionTracking;
+/// Crash reporting defaults OFF (opt-in): the SDK must NOT install
+/// crash handlers until remote config explicitly turns the flag on.
+/// Mirrors Android NSureConfigResolver.Feature.CRASH_REPORTING.defaultValue=false.
+@property (nonatomic, readonly) BOOL crashReporting;
+@property (nonatomic, readonly) BOOL remoteLogging;
+@property (nonatomic, readonly) NSInteger keepAliveRolloutPercent;
+@property (nonatomic, readonly) NSInteger printScreenRolloutPercent;
+@property (nonatomic, readonly) NSInteger fingerprintRolloutPercent;
+@property (nonatomic, readonly) NSInteger sessionTrackingRolloutPercent;
+@property (nonatomic, readonly) NSInteger crashReportingRolloutPercent;
+@property (nonatomic, readonly) NSInteger remoteLoggingRolloutPercent;
+@property (nonatomic, readonly) NSInteger appActivationRate;
+@property (nonatomic, readonly, copy) NSString * _Nonnull eventsReportUrl;
+@property (nonatomic, readonly, copy) NSString * _Nonnull fingerprintApiKey;
+/// Remote-config log level. nil means no logLevel was specified in config.
+/// Stored as NSNumber wrapping the raw Int of NSureLogLevel because @objc
+/// does not support Optional<enum>.
+@property (nonatomic, readonly, strong) NSNumber * _Nullable logLevelRaw;
+/// Resolved <code>verbosityReportingRate</code>. nil means the feature is inactive
+/// (key absent / unparseable / suppressed on kill path). When set, the
+/// value is clamped to [0, 100]. Applied as a one-shot session roll at
+/// the first config where the key appears.
+@property (nonatomic, readonly, strong) NSNumber * _Nullable verbosityReportingRate;
+/// Resolver-derived kill-switch booleans. Set to true when the
+/// corresponding layer’s <code>off</code> flag was true in the config JSON that
+/// produced this resolution. These are the authoritative kill signals
+/// consumed by <code>NSureMobileRemoteConfig.applyResolvedSideEffects</code> —
+/// they are NOT the persisted flags read back from UserDefaults.
+@property (nonatomic, readonly) BOOL globalOff;
+@property (nonatomic, readonly) BOOL merchantOff;
+@property (nonatomic, readonly) BOOL platformOff;
+@property (nonatomic, readonly) BOOL partnerOff;
++ (NSureResolvedConfig * _Nonnull)minimumModeConfig SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 SWIFT_CLASS("_TtC5nSure23NSureScreenshotDetector")
@@ -335,6 +587,12 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureScreens
 @property (nonatomic, copy) void (^ _Nullable onScreenshotTaken)(void);
 - (void)startListening;
 - (void)stopListening;
+@end
+
+SWIFT_CLASS("_TtC5nSure22NSureVersionComparator")
+@interface NSureVersionComparator : NSObject
++ (enum NSComparisonResult)compare:(NSString * _Nullable)v1 with:(NSString * _Nullable)v2 SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 #endif
