@@ -7,5 +7,4 @@ framework module nSure {
 
 module nSure.Swift {
   header "nSure-Swift.h"
-  requires objc
 }
