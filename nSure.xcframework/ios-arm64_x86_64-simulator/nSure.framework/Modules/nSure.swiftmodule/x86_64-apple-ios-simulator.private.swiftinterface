@@ -120,6 +120,9 @@ import os
   @objc final public var sessionTracking: Swift.Bool {
     get
   }
+  @objc final public var ping: Swift.Bool {
+    get
+  }
   @objc final public var crashReporting: Swift.Bool {
     get
   }
@@ -136,6 +139,9 @@ import os
     get
   }
   @objc final public var sessionTrackingRolloutPercent: Swift.Int {
+    get
+  }
+  @objc final public var pingRolloutPercent: Swift.Int {
     get
   }
   @objc final public var crashReportingRolloutPercent: Swift.Int {

@@ -541,6 +541,8 @@ SWIFT_CLASS("_TtC5nSure19NSureResolvedConfig")
 @property (nonatomic, readonly) BOOL printScreen;
 @property (nonatomic, readonly) BOOL fingerprint;
 @property (nonatomic, readonly) BOOL sessionTracking;
+/// Ping defaults OFF (opt-in).
+@property (nonatomic, readonly) BOOL ping;
 /// Crash reporting defaults OFF (opt-in): the SDK must NOT install
 /// crash handlers until remote config explicitly turns the flag on.
 /// Mirrors Android NSureConfigResolver.Feature.CRASH_REPORTING.defaultValue=false.
@@ -550,6 +552,7 @@ SWIFT_CLASS("_TtC5nSure19NSureResolvedConfig")
 @property (nonatomic, readonly) NSInteger printScreenRolloutPercent;
 @property (nonatomic, readonly) NSInteger fingerprintRolloutPercent;
 @property (nonatomic, readonly) NSInteger sessionTrackingRolloutPercent;
+@property (nonatomic, readonly) NSInteger pingRolloutPercent;
 @property (nonatomic, readonly) NSInteger crashReportingRolloutPercent;
 @property (nonatomic, readonly) NSInteger remoteLoggingRolloutPercent;
 @property (nonatomic, readonly) NSInteger appActivationRate;
