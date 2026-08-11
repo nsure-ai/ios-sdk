@@ -1,0 +1,5 @@
+framework module nSure_Private {
+    header "NSureKSCrashBridge.h"
+    header "NSureCrashRuntime.h"
+    export *
+}
