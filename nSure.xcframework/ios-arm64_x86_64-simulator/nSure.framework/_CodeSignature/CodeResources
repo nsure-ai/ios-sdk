@@ -14,15 +14,15 @@
 		</data>
 		<key>Headers/nSure-Swift.h</key>
 		<data>
-		T0PAQkTpPG7qRLfxUkjzJ8o9SDQ=
+		9oD4AsaY6DTakSiIgVzsG7YZbfM=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		SasATq0j3g8oK8C9hczL9GWs39I=
+		hqd3q5f5bqURRjzOGe5mPw4tAGk=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		Yl5bZJY7oGvB1iMd+Mn9ZmvrXC4=
+		TgEKY50+vTkEvj7xgh9021Sb73Q=
 		</data>
 		<key>Modules/module.private.modulemap</key>
 		<data>
@@ -30,43 +30,43 @@
 		</data>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		CApR/9URBaNnyzC3WVaCOGuEYLY=
+		NzcFisLrs6RQBBgJhOyY8rW1Kv8=
 		</data>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		tqCUl6N0fdUkERIDb6f1NVcVGGE=
+		LO4urHoKZGA4oZfs/6wWXKNLtfA=
 		</data>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		FYgZAsDhFCSA4dQCQ2NQeHMYrl0=
+		lUCwkop7UVEvqQjKT+NdKMJKrIc=
 		</data>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		tqCUl6N0fdUkERIDb6f1NVcVGGE=
+		LO4urHoKZGA4oZfs/6wWXKNLtfA=
 		</data>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zNAgyweqgEhlfGU3Gwfu/B5e7f4=
+		wD8n/I4aBdlj0tRxR/6mf+SJCSY=
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		CApR/9URBaNnyzC3WVaCOGuEYLY=
+		NzcFisLrs6RQBBgJhOyY8rW1Kv8=
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		U9xgrIm8upzr4Czqs+txXGkP7Bc=
+		Q6DQTXsahNEDPc2x9tetWrrhD9I=
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		lNF3g7TkKC1jaLw6u5wSqEH4vfQ=
+		UmvoMn546V0YElMTw6i1Z0T4MU0=
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		U9xgrIm8upzr4Czqs+txXGkP7Bc=
+		Q6DQTXsahNEDPc2x9tetWrrhD9I=
 		</data>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		RGMbScqHCwJoYG+YGNeZtpuA2S0=
+		/ITSV6L7wKnNMlbGwDFFT0EhpUs=
 		</data>
 		<key>PrivateHeaders/NSureCrashRuntime.h</key>
 		<data>
@@ -97,14 +97,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			QfuCW4WS5FPYHtAVOBsVP1m7s9fud9cpuSCY4uORllI=
+			OoPj75inzMzR9bQdmQU1wYijwKr/o63OBrTYPh2Lg3c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UuDySYRjKvabpQQ0kWr592N6xCznUTTXDm+XOTaRqwo=
+			rjlms5UlSRNPvvhOdN0mpcvo69w3wovBXAbfh0jjzgY=
 			</data>
 		</dict>
 		<key>Modules/module.private.modulemap</key>
@@ -118,70 +118,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWnm6yJyTp0T+jwpVpYDely2r1llPgl6sx7h0VueIVk=
+			gbonVjmfUGIJVTVV7Wt+nepCocEDTuSw7ecJdt9heSY=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7uNe/Ku+SxGAQP9kL0y/riy2DHSLqd4iWTy9FDU2vLA=
+			t53c5vEHzMzPBirtoA9JsKx+H4792x7oS6crm/bF1z0=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			TDuMCCOyKgLSRmApypLDFwaRVvLEKST47MDDnEeq/gQ=
+			lrXQWRpPgX6Mru5gDtKGz8Abbc4FkgaIYw7SsOv/AHg=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7uNe/Ku+SxGAQP9kL0y/riy2DHSLqd4iWTy9FDU2vLA=
+			t53c5vEHzMzPBirtoA9JsKx+H4792x7oS6crm/bF1z0=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/8OW06zzsPFHao5jNIbuDaJp5x0kvQsyQBznIj5hMuw=
+			ys/S0ayDPnWOEMlrCvkKXJQYj3UDN/PZK/3uJwW8q+A=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eWnm6yJyTp0T+jwpVpYDely2r1llPgl6sx7h0VueIVk=
+			gbonVjmfUGIJVTVV7Wt+nepCocEDTuSw7ecJdt9heSY=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3dB0ijSTE8IRguf1WmohVdRRyvF3n2s414gOWBRa/Js=
+			1CMEn7wxf3FinFy/Wb78U4rL6IpWKygTlyuCY7R0F44=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			39eXQiEc63gAYIym6K01jfK3RoZjTifu4saGz3Hj128=
+			C3E2KbcYUXXEsBJwy4jYdNbvn/2fXZFuJr/bLNNpYS0=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3dB0ijSTE8IRguf1WmohVdRRyvF3n2s414gOWBRa/Js=
+			1CMEn7wxf3FinFy/Wb78U4rL6IpWKygTlyuCY7R0F44=
 			</data>
 		</dict>
 		<key>Modules/nSure.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7Hdj+TSf/ECx/5vTacngfQSv5VL5/tZpStL6xSc8K0E=
+			jo1beNQQ9/LU874Kkg3XPVJXuC3pbceol2pI3oxQtLk=
 			</data>
 		</dict>
 		<key>PrivateHeaders/NSureCrashRuntime.h</key>
