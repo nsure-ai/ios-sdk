@@ -18,7 +18,7 @@ Then run `pod install`. nSure links against the Fingerprint iOS SDK v4 (`Fingerp
 **Using Swift Package Manager:**
 1. In Xcode: **File > Add Package Dependencies**
 2. Enter: `https://github.com/nsure-ai/ios-sdk`
-3. Select version **1.4.1** or later
+3. Select version **1.4.2** or later
 4. Add **nSure** to your target (this pulls in the Fingerprint iOS SDK v4 automatically)
 
 ### Step 2: Initialize
@@ -67,7 +67,7 @@ NSure.sharedInstance.deviceId
 **Using Swift Package Manager:**
 1. In Xcode: **File > Add Package Dependencies**
 2. Enter: `https://github.com/nsure-ai/ios-sdk`
-3. Select version **1.4.1** or later
+3. Select version **1.4.2** or later
 4. Add **nSure** to your target (this pulls in the Fingerprint iOS SDK v4 automatically)
 
 **Using CocoaPods:**
