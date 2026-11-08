@@ -51,7 +51,7 @@ Import “NSure.h” into AppDelegate.m, and initialize nSure within `applicatio
 * **configBaseUrl**  
   An optional base URL used for DNS cloaking. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
 * **eventsReportUrl**  
-  An optional base URL that overrides the default events reporting endpoint. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
+  Optional base URL that overrides the default events reporting endpoint.
 
 ### Step 3: Retrieve device id from the sdk
 The sdk exposes a property "deviceId" on NSure.sharedInstance and one can use this property to retrieve the device id.
@@ -114,7 +114,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
 * **configBaseUrl**  
   An optional base URL used for DNS cloaking. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
 * **eventsReportUrl**  
-  An optional base URL that overrides the default events reporting endpoint. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
+  Optional base URL that overrides the default events reporting endpoint.
 
 ### Step 3: Retrieve device id from the sdk
 The sdk exposes a property "deviceId" on NSure.sharedInstance and one can use this property to retrieve the device id.
