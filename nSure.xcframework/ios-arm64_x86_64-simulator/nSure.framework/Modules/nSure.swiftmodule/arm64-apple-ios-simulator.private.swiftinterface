@@ -58,7 +58,7 @@ import os
     @objc set
   }
   #if compiler(>=5.3) && $NonescapableTypes
-  @objc dynamic final public func fetchRemoteConfig(with appId: Swift.String, configUrl: Swift.String?, fallbackConfigUrl: Swift.String?, completion: (() -> Swift.Void)?)
+  @objc dynamic final public func fetchRemoteConfig(appId: Swift.String, isProduction: Swift.Bool, overrideBaseUrl: Swift.String?, completion: (() -> Swift.Void)?)
   #endif
   @objc dynamic final public func parseRemoteConfig(_ dict: [Swift.String : Any])
   @objc public static var maxConfigBytes: Swift.Int {
@@ -435,6 +435,16 @@ extension nSure.NSureCrashProductionHooks {
 @_inheritsConvenienceInitializers @objc(NSureEnvironment) final public class NSureEnvironment : ObjectiveC.NSObject {
   #if compiler(>=5.3) && $NonescapableTypes
   @objc public static func isSandboxAppId(_ appId: Swift.String?) -> Swift.Bool
+  #endif
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(NSureInputValidator) final public class NSureInputValidator : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func validateConfigBaseUrl(_ url: Swift.String?) -> Swift.String?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func validateEventsReportUrl(_ url: Swift.String?) -> Swift.String?
   #endif
   @objc override dynamic public init()
   @objc deinit

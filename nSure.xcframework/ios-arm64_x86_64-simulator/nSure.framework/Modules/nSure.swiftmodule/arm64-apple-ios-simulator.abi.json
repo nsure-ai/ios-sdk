@@ -1243,7 +1243,7 @@
           {
             "kind": "Function",
             "name": "fetchRemoteConfig",
-            "printedName": "fetchRemoteConfig(with:configUrl:fallbackConfigUrl:completion:)",
+            "printedName": "fetchRemoteConfig(appId:isProduction:overrideBaseUrl:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1258,17 +1258,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -1311,10 +1303,10 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@nSure@objc(cs)NSureMobileRemoteConfig(im)fetchRemoteConfigWith:configUrl:fallbackConfigUrl:completion:",
-            "mangledName": "$s5nSure23NSureMobileRemoteConfigC05fetchdE04with9configUrl08fallbackeI010completionySS_SSSgAIyycSgtF",
+            "usr": "c:@M@nSure@objc(cs)NSureMobileRemoteConfig(im)fetchRemoteConfigWithAppId:isProduction:overrideBaseUrl:completion:",
+            "mangledName": "$s5nSure23NSureMobileRemoteConfigC05fetchdE05appId12isProduction15overrideBaseUrl10completionySS_SbSSSgyycSgtF",
             "moduleName": "nSure",
-            "objc_name": "fetchRemoteConfigWith:configUrl:fallbackConfigUrl:completion:",
+            "objc_name": "fetchRemoteConfigWithAppId:isProduction:overrideBaseUrl:completion:",
             "declAttributes": [
               "Final",
               "AccessControl",
@@ -10430,6 +10422,236 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nSure",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NSureInputValidator",
+        "printedName": "NSureInputValidator",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "validateConfigBaseUrl",
+            "printedName": "validateConfigBaseUrl(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@nSure@objc(cs)NSureInputValidator(cm)validateConfigBaseUrl:",
+            "mangledName": "$s5nSure19NSureInputValidatorC21validateConfigBaseUrlySSSgAEFZ",
+            "moduleName": "nSure",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "validateEventsReportUrl",
+            "printedName": "validateEventsReportUrl(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@nSure@objc(cs)NSureInputValidator(cm)validateEventsReportUrl:",
+            "mangledName": "$s5nSure19NSureInputValidatorC23validateEventsReportUrlySSSgAEFZ",
+            "moduleName": "nSure",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSureInputValidator",
+                "printedName": "nSure.NSureInputValidator",
+                "usr": "c:@M@nSure@objc(cs)NSureInputValidator"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@nSure@objc(cs)NSureInputValidator(im)init",
+            "mangledName": "$s5nSure19NSureInputValidatorCACycfc",
+            "moduleName": "nSure",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@nSure@objc(cs)NSureInputValidator",
+        "mangledName": "$s5nSure19NSureInputValidatorC",
+        "moduleName": "nSure",
+        "objc_name": "NSureInputValidator",
+        "declAttributes": [
+          "Final",
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nSure"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "nSure"
+      },
+      {
         "kind": "TypeDecl",
         "name": "UIApplication",
         "printedName": "UIApplication",
@@ -10708,7 +10930,7 @@
     {
       "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureMobileRemoteConfig.swift",
       "kind": "IntegerLiteral",
-      "offset": 20337,
+      "offset": 19160,
       "length": 6,
       "value": "262144"
     },
@@ -11460,6 +11682,34 @@
       "offset": 17869,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureInputValidator.swift",
+      "kind": "IntegerLiteral",
+      "offset": 273,
+      "length": 4,
+      "value": "2048"
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteConfigEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 177,
+      "length": 26,
+      "value": "\"https:\/\/sdk.nsureapi.com\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteConfigEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 233,
+      "length": 34,
+      "value": "\"https:\/\/sandbox-sdk.nsureapi.com\""
+    },
+    {
+      "filePath": "\/Users\/runner\/work\/ios-client-sdk\/ios-client-sdk\/nSure\/nSure\/NSureRemoteConfigEndpoints.swift",
+      "kind": "StringLiteral",
+      "offset": 379,
+      "length": 3,
+      "value": "\"\/\""
     }
   ]
 }

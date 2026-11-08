@@ -415,6 +415,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureFingerp
 - (void)testReset;
 @end
 
+SWIFT_CLASS_NAMED("NSureInputValidator")
+@interface NSureInputValidator : NSObject
+/// Returns a trimmed base URL (trailing slashes removed), or nil when unusable.
+/// Rules: non-blank, <= 2048 chars, https:// (http:// only in DEBUG), no “..”, parseable with a host.
++ (NSString * _Nullable)validateConfigBaseUrl:(NSString * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)validateEventsReportUrl:(NSString * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 enum NSureLogLevel : NSInteger;
 @protocol NSureLogDelegate;
 SWIFT_CLASS_NAMED("NSureLog")
@@ -500,7 +509,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureMobileR
 @property (nonatomic, strong) NSURLSessionConfiguration * _Nonnull urlSessionConfiguration;
 /// Set this before SDK init to bypass network fetch and use a local JSON dictionary.
 @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable localConfigOverride;
-- (void)fetchRemoteConfigWith:(NSString * _Nonnull)appId configUrl:(NSString * _Nullable)configUrl fallbackConfigUrl:(NSString * _Nullable)fallbackConfigUrl completion:(void (^ _Nullable)(void))completion;
+/// Resolves the config for <code>appId</code>: <code>localConfigOverride</code> wins, then the first endpoint that
+/// answers (see <code>NSureRemoteConfigEndpoints</code>), then the cache or minimum mode.
+- (void)fetchRemoteConfigWithAppId:(NSString * _Nonnull)appId isProduction:(BOOL)isProduction overrideBaseUrl:(NSString * _Nullable)overrideBaseUrl completion:(void (^ _Nullable)(void))completion;
 - (void)parseRemoteConfig:(NSDictionary<NSString *, id> * _Nonnull)dict;
 /// Hard size cap for remote-config payloads. Bodies over this are rejected
 /// without parsing to bound memory/CPU on a hostile or misbehaving server.
@@ -1023,6 +1034,15 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureFingerp
 - (void)testReset;
 @end
 
+SWIFT_CLASS_NAMED("NSureInputValidator")
+@interface NSureInputValidator : NSObject
+/// Returns a trimmed base URL (trailing slashes removed), or nil when unusable.
+/// Rules: non-blank, <= 2048 chars, https:// (http:// only in DEBUG), no “..”, parseable with a host.
++ (NSString * _Nullable)validateConfigBaseUrl:(NSString * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
++ (NSString * _Nullable)validateEventsReportUrl:(NSString * _Nullable)url SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 enum NSureLogLevel : NSInteger;
 @protocol NSureLogDelegate;
 SWIFT_CLASS_NAMED("NSureLog")
@@ -1108,7 +1128,9 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) NSureMobileR
 @property (nonatomic, strong) NSURLSessionConfiguration * _Nonnull urlSessionConfiguration;
 /// Set this before SDK init to bypass network fetch and use a local JSON dictionary.
 @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable localConfigOverride;
-- (void)fetchRemoteConfigWith:(NSString * _Nonnull)appId configUrl:(NSString * _Nullable)configUrl fallbackConfigUrl:(NSString * _Nullable)fallbackConfigUrl completion:(void (^ _Nullable)(void))completion;
+/// Resolves the config for <code>appId</code>: <code>localConfigOverride</code> wins, then the first endpoint that
+/// answers (see <code>NSureRemoteConfigEndpoints</code>), then the cache or minimum mode.
+- (void)fetchRemoteConfigWithAppId:(NSString * _Nonnull)appId isProduction:(BOOL)isProduction overrideBaseUrl:(NSString * _Nullable)overrideBaseUrl completion:(void (^ _Nullable)(void))completion;
 - (void)parseRemoteConfig:(NSDictionary<NSString *, id> * _Nonnull)dict;
 /// Hard size cap for remote-config payloads. Bodies over this are rejected
 /// without parsing to bound memory/CPU on a hostile or misbehaving server.

@@ -45,6 +45,19 @@
                                partherID:(NSString * _Nullable)partherID
                            configBaseUrl:(NSString * _Nullable)configBaseUrl;
 
+/**
+ Returns (and creates, if needed) a singleton instance of the API.
+
+ @param appId           your app ID
+ @param partherID       Optional  parther ID
+ @param configBaseUrl   Optional configuration base URL to override the default API endpoint
+ @param eventsReportUrl Optional base URL to override the default events reporting endpoint
+ */
++ (nonnull NSure*)sharedInstanceWithAppID:(NSString * _Nonnull)appId
+                               partherID:(NSString * _Nullable)partherID
+                           configBaseUrl:(NSString * _Nullable)configBaseUrl
+                         eventsReportUrl:(NSString * _Nullable)eventsReportUrl;
+
 /*!
  *  Returns a previously instantiated singleton instance.
  */
