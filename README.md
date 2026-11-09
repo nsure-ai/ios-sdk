@@ -18,7 +18,7 @@ Then run `pod install`. nSure links against the Fingerprint iOS SDK v4 (`Fingerp
 **Using Swift Package Manager:**
 1. In Xcode: **File > Add Package Dependencies**
 2. Enter: `https://github.com/nsure-ai/ios-sdk`
-3. Select version **1.4.2** or later
+3. Select version **1.4.3** or later
 4. Add **nSure** to your target (this pulls in the Fingerprint iOS SDK v4 automatically)
 
 ### Step 2: Initialize
@@ -34,6 +34,12 @@ Import “NSure.h” into AppDelegate.m, and initialize nSure within `applicatio
     [NSure sharedInstanceWithAppID:@"iOS_OBJC_SAMPLE_APP_ID"
                          partherID:@"PARTNER_ID"
                      configBaseUrl:@"https://custom-config-url.com"];
+
+    // Optionally also specify a custom events reporting URL
+    [NSure sharedInstanceWithAppID:@"iOS_OBJC_SAMPLE_APP_ID"
+                         partherID:@"PARTNER_ID"
+                     configBaseUrl:@"https://custom-config-url.com"
+                   eventsReportUrl:@"https://custom-events-url.com"];
 }
 ```
 #### Initialization Parameters:
@@ -44,6 +50,8 @@ Import “NSure.h” into AppDelegate.m, and initialize nSure within `applicatio
   The partner identifier provided by nSure.ai. If no partner ID is provided, set this value to `nil`.
 * **configBaseUrl**  
   An optional base URL used for DNS cloaking. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
+* **eventsReportUrl**  
+  Optional base URL that overrides the default events reporting endpoint.
 
 ### Step 3: Retrieve device id from the sdk
 The sdk exposes a property "deviceId" on NSure.sharedInstance and one can use this property to retrieve the device id.
@@ -67,7 +75,7 @@ NSure.sharedInstance.deviceId
 **Using Swift Package Manager:**
 1. In Xcode: **File > Add Package Dependencies**
 2. Enter: `https://github.com/nsure-ai/ios-sdk`
-3. Select version **1.4.2** or later
+3. Select version **1.4.3** or later
 4. Add **nSure** to your target (this pulls in the Fingerprint iOS SDK v4 automatically)
 
 **Using CocoaPods:**
@@ -89,6 +97,12 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
         NSure.sharedInstance(withAppID: "iOS_SWIFT_SAMPLE_APP_ID",
                              partherID: "PARTNER_ID",
                              configBaseUrl: "https://custom-config-url.com")
+
+        // Optionally also specify a custom events reporting URL
+        NSure.sharedInstance(withAppID: "iOS_SWIFT_SAMPLE_APP_ID",
+                             partherID: "PARTNER_ID",
+                             configBaseUrl: "https://custom-config-url.com",
+                             eventsReportUrl: "https://custom-events-url.com")
 }
 ```
 #### Initialization Parameters:
@@ -99,6 +113,8 @@ func application(application: UIApplication, didFinishLaunchingWithOptions launc
   The partner identifier provided by nSure.ai. If no partner ID is provided, set this value to `nil`.
 * **configBaseUrl**  
   An optional base URL used for DNS cloaking. This value will be provided by nSure.ai when applicable. If no value is provided, set this to `nil`.
+* **eventsReportUrl**  
+  Optional base URL that overrides the default events reporting endpoint.
 
 ### Step 3: Retrieve device id from the sdk
 The sdk exposes a property "deviceId" on NSure.sharedInstance and one can use this property to retrieve the device id.
