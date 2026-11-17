@@ -3,14 +3,14 @@ import PackageDescription
 
 let package = Package(
     name: "nSure",
-    platforms: [.iOS(.v14)],
+    platforms: [.iOS(.v15)],
     products: [
         .library(name: "nSure", targets: ["nSure", "nSureDependencies"])
     ],
     dependencies: [
         .package(
             url: "https://github.com/fingerprintjs/fingerprint-ios",
-            from: "4.0.0"
+            from: "4.3.0"
         )
     ],
     targets: [

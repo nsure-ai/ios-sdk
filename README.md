@@ -11,7 +11,7 @@ The nSure SDK can be integrated using **Swift Package Manager** or **CocoaPods**
 **Using CocoaPods:**
 ```
 pod 'nSure'
-pod 'Fingerprint-iOS', '~> 4.0'
+pod 'Fingerprint-iOS', '~> 4.3'
 ```
 Then run `pod install`. nSure links against the Fingerprint iOS SDK v4 (`Fingerprint.framework`); the second line embeds it so the app can launch.
 
@@ -81,7 +81,7 @@ NSure.sharedInstance.deviceId
 **Using CocoaPods:**
 ```
 pod 'nSure'
-pod 'Fingerprint-iOS', '~> 4.0'
+pod 'Fingerprint-iOS', '~> 4.3'
 ```
 Then run `pod install`. nSure links against the Fingerprint iOS SDK v4 (`Fingerprint.framework`); the second line embeds it so the app can launch.
 
