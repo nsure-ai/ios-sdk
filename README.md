@@ -2,6 +2,14 @@
 
 The nSure SDK can be integrated using **Swift Package Manager** or **CocoaPods**. See the language-specific sections below for installation and usage.
 
+## Requirements
+
+- iOS 15.0 or later
+- Xcode 26.5 or later
+- Fingerprint iOS SDK 4.3 or later
+
+Version 1.5.0 raised the minimum iOS from 14 to 15. Apps that still support iOS 14 should stay on nSure 1.4.3.
+
 ---
 
 # Objective-C
